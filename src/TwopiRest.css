@@ -1,0 +1,26 @@
+:root {
+  --tprest-dark: #f8f6f8;
+  --tprest-gray: #09ad5b;
+  --tprest-light: #080327;
+}
+.tprest-outter__div {
+  color: var(--tprest-dark);
+  background-color: var(--tprest-light);
+  accent-color: var(--tprest-gray);
+  min-width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+.tprest-preset__select {
+  display: block;
+  margin: 1rem;
+}
+.tprest-body__textarea,
+.tprest-header__textarea {
+  /* margin: 0; */
+  padding: 1rem;
+  width: 90%;
+}
+.tprest-label__p {
+  margin: 0.125rem;
+}
