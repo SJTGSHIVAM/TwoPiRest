@@ -131,7 +131,7 @@ const TwopiRest = ({
           )
             res = await fetch(`${baseUrl}${url}${queryStr}`, {
               method: `${reqType}`,
-              headers: JSON.parse(header),
+              headers: header === "" ? {} : JSON.parse(header),
             });
 
           if (
@@ -141,8 +141,8 @@ const TwopiRest = ({
           )
             res = await fetch(`${baseUrl}${url}${queryStr}`, {
               method: `${reqType}`,
-              headers: JSON.parse(header),
-              body,
+              headers: header === "" ? {} : JSON.parse(header),
+              body: body === "" ? "{}" : body,
             });
           resStatus = res?.status;
           resJson = await res?.json();
