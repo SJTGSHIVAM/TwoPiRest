@@ -1,0 +1,42 @@
+{
+  "name": "twopi-rest",
+  "version": "1.0.1",
+  "description": "TwoPiRest is a react component that helps you to make rest api requests from your application.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/SJTGSHIVAM/TwoPiRest",
+  "author": "Shivam Pandey",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rollup": "^2.73.0",
+    "rollup-plugin-import-css": "^3.0.3",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "react-json-view": "^1.21.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "keywords": [
+    "react",
+    "rest-client",
+    "mock-server",
+    "mock-api",
+    "mock-api-client"
+  ]
+}
