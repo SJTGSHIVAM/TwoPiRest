@@ -1,4 +1,3 @@
-import './TwopiRest.css';
 import './index.css';
 
 import React, {
