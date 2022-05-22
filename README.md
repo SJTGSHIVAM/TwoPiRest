@@ -1,44 +1,53 @@
 # TwopiRest
+
 TwopiRest is a rest client in shape of a react component. It is useful for playing around with mock apis (as they some of them can only be accessed by the running application) and it also works well with real rest-apis.
 We can pass an optional parameter "preset" containg the details of rest requests we want to make in order to have request templates(saves a lot a manual work while developing something).
 
-## Installation 
+## Installation
+
 ```
 npm i twopi-rest
 ```
-or 
+
+or
+
 ```
 yarn add twopi-rest
 ```
+
 ## usage
 
 ```
 // import
  import TwopiRest from 'twopi-rest';
- 
+
 // usage as a component
 
  <TwopiRest preset={requests} />
- 
+
  // with out preset
- 
+
   <TwopiRest />
 
 ```
+
 Now you should be wondering what should be the shape of preset, right? preset is an array of objects which should look like this:
+
 ```
 [  {
-    name: "empty", // mustv have a unique name amoung all your request objects 
+    name: "empty", // mustv have a unique name amoung all your request objects
     req_type: "PATCH", // must be one of "PATCH" | "GET" | "POST" | "PUT" | "DELETE"
     base_url: "",  //  contains base url you want to hit
-    url: "",       //  contains api end point 
-    query_str: "", //  contains query string 
+    url: "",       //  contains api end point
+    query_str: "", //  contains query string
     body: {},      // contains the body of request
     header: {},    //  contains the body of request
   },
   ]
 ```
+
 For more insights here is the type definition of preset:
+
 ```
 preset?: Array<{
     name: string;
@@ -50,7 +59,9 @@ preset?: Array<{
     header: Object;
   }>
 ```
+
 you can quickly copy this templete to start writing your preset:
+
 ```
 [  {
     name: "empty",
@@ -62,7 +73,9 @@ you can quickly copy this templete to start writing your preset:
     header: {},
   },]
 ```
+
 Now lets see a complete example :
+
 ```
 import './App.css';
 import TwopiRest from 'twopi-rest';
@@ -136,7 +149,15 @@ function App() {
 
 export default App;
 ```
-** Right now we are seeing some issues with css files, you can directly link the css file from here (or just copy pate it to local file )
+
+\*\* Right now we are seeing some issues with css files, you can directly link the css file from here (or just copy pate it to local file )
+
 ```
 https://github.com/SJTGSHIVAM/TwoPiRest/blob/master/src/TwopiRest.css
+```
+
+or import in your index file using
+
+```
+import 'twopi-rest/dist/index.css';
 ```
