@@ -26,8 +26,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "react-json-view": "^1.21.3",
-    "twopi-rest": "^1.0.4"
+    "react-json-view": "^1.21.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

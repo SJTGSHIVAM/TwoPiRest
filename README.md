@@ -153,7 +153,7 @@ export default App;
 \*\* Right now we are seeing some issues with css files, you can directly link the css file from here (or just copy pate it to local file )
 
 ```
-https://github.com/SJTGSHIVAM/TwoPiRest/blob/master/src/TwopiRest.css
+https://github.com/SJTGSHIVAM/TwoPiRest/blob/master/src/index.css
 ```
 
 or import in your index file using

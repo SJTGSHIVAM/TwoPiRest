@@ -31,7 +31,7 @@ const TwopiRest = ({
   const reqSelect = useRef<HTMLSelectElement>(null);
   return (
     <div className={"tprest-outter__div"}>
-      <div>
+      <div className={"tprest-preset__div"}>
         {" "}
         <select
           className={"tprest-preset__select"}

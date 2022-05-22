@@ -13,7 +13,10 @@
 }
 .tprest-preset__select {
   display: block;
-  margin: 1rem;
+}
+.tprest-preset__div {
+  min-height: inherit;
+  padding: 1rem;
 }
 .tprest-body__textarea,
 .tprest-header__textarea {
