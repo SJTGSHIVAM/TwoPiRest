@@ -1,4 +1,5 @@
 import './TwopiRest.css';
+import './index.css';
 
 import React, {
   useRef,
@@ -31,35 +32,38 @@ const TwopiRest = ({
   const reqSelect = useRef<HTMLSelectElement>(null);
   return (
     <div className={"tprest-outter__div"}>
-      <select
-        className={"tprest-preset__select"}
-        placeholder="fff"
-        onChange={({ currentTarget: { value } }) => {
-          let index = Number(value);
-          if (!isNaN(index)) {
-            setUrl(preset[index].url);
-            setQueryStr(preset[index].query_str);
-            setBaseUrl(preset[index].base_url);
-            setBody(JSON.stringify(preset[index].body));
-            setHeader(JSON.stringify(preset[index].header));
-            setReqType(preset[index].req_type);
+      <div>
+        {" "}
+        <select
+          className={"tprest-preset__select"}
+          placeholder="fff"
+          onChange={({ currentTarget: { value } }) => {
+            let index = Number(value);
+            if (!isNaN(index)) {
+              setUrl(preset[index].url);
+              setQueryStr(preset[index].query_str);
+              setBaseUrl(preset[index].base_url);
+              setBody(JSON.stringify(preset[index].body));
+              setHeader(JSON.stringify(preset[index].header));
+              setReqType(preset[index].req_type);
 
-            if (reqSelect.current)
-              reqSelect.current.value = preset[index].req_type;
-          } else {
-            setUrl("");
-            setBody("");
-            setHeader("");
-          }
-        }}
-      >
-        <option value="NaN">custom</option>
-        {preset.map((e, i) => (
-          <option value={i} key={e.name}>
-            {e.req_type}-{e.name}
-          </option>
-        ))}
-      </select>
+              if (reqSelect.current)
+                reqSelect.current.value = preset[index].req_type;
+            } else {
+              setUrl("");
+              setBody("");
+              setHeader("");
+            }
+          }}
+        >
+          <option value="NaN">custom</option>
+          {preset.map((e, i) => (
+            <option value={i} key={e.name}>
+              {e.req_type}-{e.name}
+            </option>
+          ))}
+        </select>
+      </div>
       <div>
         <select
           ref={reqSelect}
