@@ -10,17 +10,16 @@
   min-width: 100%;
   max-width: 100%;
   margin: auto;
+  min-height: inherit;
 }
 .tprest-preset__select {
   display: block;
 }
 .tprest-preset__div {
-  min-height: inherit;
   padding: 1rem;
 }
 .tprest-body__textarea,
 .tprest-header__textarea {
-  /* margin: 0; */
   padding: 1rem;
   width: 90%;
 }

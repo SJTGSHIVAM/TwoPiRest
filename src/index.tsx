@@ -171,6 +171,7 @@ const TwopiRest = ({
         <ReactJson
           src={resp}
           theme={"pop"}
+          collapsed={true}
           style={{
             overflowWrap: "break-word",
           }}
