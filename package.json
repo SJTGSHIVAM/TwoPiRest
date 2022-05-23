@@ -1,5 +1,7 @@
 {
-
-	"private":true,
-	"workspaces":["package"]
+  "private": true,
+  "workspaces": [
+    "lib",
+    "test_app"
+  ]
 }
